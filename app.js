@@ -7,10 +7,10 @@ const auth = require('./routes/auth');
 const doctors = require('./routes/doctors');
 const config = require('config');
 
-if(!config.get('jwtPrivateKey')){
-    console.log('key is missing');
-    process.exit(1);
-}
+// if(!config.get('jwtPrivateKey')){
+//     console.log('key is missing');
+//     process.exit(1);
+// }
 
 mongoose.connect('mongodb+srv://teja123:workattech@reviewandrating.g4lpd.mongodb.net/test?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true})
     .then(console.log("connected to db"))
