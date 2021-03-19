@@ -22,7 +22,7 @@ app.use('/reviews',reviews);
 app.use('/auth',auth);
 app.use('/doctors',doctors);
 app.get('/',(req,res) => {
-    res.send("Hello World");
+    res.status(200).send("Hello World");
 });
 const port = process.env.PORT || 3000;
 app.listen(port,()=> console.log(`listening at ${port}`));
